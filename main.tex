@@ -1,0 +1,184 @@
+%------------------------------------------------------------
+% 这是南开大学近代物理实验报告论文模板的非官方版本，由食司依据学院下发的实验报告模板制作，食司不对该报告格式的正确性负任何责任
+% 需要您填入的所有信息都在“填入信息区”中，填充无误后即可开始编辑正文
+% 请使用xelatex->biber->xelatex*2的编译方式，请勿在overleaf上编译（如需在overleaf上编译，由于overleaf上字体库较少，需修改字体）
+%------------------------------------------------------------
+\documentclass[a4paper,UTF8]{ctexart}
+\usepackage[hmargin=1.8cm,vmargin=2.2cm]{geometry}
+\usepackage{fontspec}
+\usepackage{titlesec}
+\usepackage{fancyhdr}
+\usepackage{setspace}
+\usepackage{caption}
+\usepackage{authblk}
+\usepackage{setspace}
+\usepackage[hang,flushmargin]{footmisc}
+\usepackage{etoolbox}
+\AtBeginEnvironment{thebibliography}{\xiaowu}
+\usepackage[hyperref=true,backend=biber,sorting=none,backref=true]{biblatex}
+\addbibresource{reference.bib}
+
+% 字体设置
+\setmainfont{Times New Roman}
+\setCJKmainfont{SimSun}[AutoFakeBold]
+\setCJKfamilyfont{hei}{SimHei}[AutoFakeBold]
+\newcommand{\hei}{\CJKfamily{hei}}
+\newcommand{\xiaosan}{\fontsize{15pt}{15pt}\selectfont}
+\newcommand{\xiaoer}{\fontsize{18pt}{18pt}\selectfont}
+\newcommand{\xiaosi}{\fontsize{12pt}{12pt}\selectfont}
+\newcommand{\wuhao}{\fontsize{10.5pt}{10.5pt}\selectfont}
+\newcommand{\xiaowu}{\fontsize{9pt}{9pt}\selectfont}
+\newcommand{\liuhao}{\fontsize{7.5pt}{7.5pt}\selectfont}
+% 标题格式
+\titleformat{\section}{\hei\xiaosi\bfseries}{\thesection}{1em}{}
+\titleformat{\subsection}{\hei\wuhao\bfseries}{\thesubsection}{1em}{}
+% 正文行距
+\onehalfspacing
+% 作者单位格式
+\renewcommand\Authfont{\zihao{6}\songti}
+\renewcommand\Affilfont{\zihao{6}\songti}
+\renewcommand\Authands{，}
+
+%------------------------------------------------------------
+% 填入信息区：
+%------------------------------------------------------------
+
+\def\cntitle{实验名} %中文标题
+\def\cnabstract{摘要喵} %中文摘要
+\def\cnkeywords{喵，喵，喵} %中文关键词
+\def\cnauthor{张三} %中文作者
+\def\cnteacher{李四} %指导教师
+\def\cnaff{物理科学学院, 南开大学, 天津300071} %中文单位
+\def\egtitle{Experiment name} %英文标题
+\def\egabstract{Abstract} %英文摘要
+\def\egkeywords{Miao; Miao; Miao} %英文关键词
+\def\egauthor{San Zhang} %英文作者
+\def\egteacher{Si Li} %指导教师英文名
+\def\egaff{School of Physics, Nankai University, Tianjin 300071, China} %英文单位
+\def\expdate{2025-01-01} %实验日期
+\def\teacheremail{XXXX@nankai.edu.cn} %指导教师邮箱
+\def\oneortwo{1} %一或二（阿拉伯数字）
+
+%------------------------------------------------------------
+% 填入信息区结束
+%------------------------------------------------------------
+
+\begin{document}
+
+\title{\centering\hei\xiaoer\bfseries \cntitle\par}
+\author[]{\xiaosi \fangsong \cnauthor，\cnteacher *}
+\affil[]{\liuhao（\cnaff）}
+\date{}
+\maketitle
+% 页眉页脚设置
+\thispagestyle{fancy}
+\fancyhead{}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0.5pt}
+\fancyhead[C]{\footnotesize\xiaowu Modern Physics Experiment \uppercase\expandafter{\romannumeral \oneortwo}}
+\renewcommand{\thefootnote}{}
+\footnotetext{\noindent{\liuhao\bfseries \ \ \ 实验日期：}{\liuhao \expdate}\\
+{\liuhao\bfseries *指导教师：}{\liuhao \cnteacher，E-mail：\teacheremail}
+}
+\pagestyle{empty}   
+% 图表设置
+\captionsetup[figure]{font=small,labelsep=space,skip=2pt}
+\renewcommand{\figurename}{图.}
+\captionsetup[table]{font=small,labelsep=space,skip=2pt}
+\renewcommand{\tablename}{Table}
+\setstretch{1.5}
+\wuhao
+
+% 以下为正文
+% 摘要
+\noindent{\xiaowu\hei\quad 摘要：}{\xiaowu\songti \cnabstract}
+
+% 关键词
+\noindent{\xiaowu\hei\quad 关键词：}{\xiaowu\songti \cnkeywords}
+
+%------------------------------------------------------------
+% 以下为正文
+%------------------------------------------------------------
+
+\section{一级标题}
+\subsection{二级标题}
+我能吞下玻璃而不伤身体我能吞下玻璃而不伤身体我能吞下玻璃而不伤身体我能吞下玻璃而不伤身体我能吞下玻璃而不伤身体我能吞下玻璃而不伤身体我能吞下玻璃而不伤身体我能吞下玻璃而不伤身体我能吞下玻璃而不伤身体我能吞下玻璃而不伤身体我能吞下玻璃而不伤身体我能吞下玻璃而不伤身体我
+能吞下玻璃而不伤身体我能吞下玻璃而不伤身体我能吞下玻璃而不伤身体我能吞下玻璃而不伤身体我能吞下玻璃而不伤身体我能吞下玻璃而不伤身体\cite{einstein1905molekularkinetischen}
+
+我能吞下玻璃而不伤身体我能吞下玻璃而不伤身体我能吞下玻璃而不伤身体我能吞下玻璃而不伤身体我能吞下玻璃而不伤身体我能吞下玻璃而不伤身体我能吞下玻璃而不伤身体我能吞下玻璃而不伤身体我能吞下玻璃而不伤身体我能吞下玻璃而不伤身体我能吞下玻璃而不伤身体我能吞下玻璃而不伤身体我
+能吞下玻璃而不伤身体我能吞下玻璃而不伤身体我能吞下玻璃而不伤身体我能吞下玻璃而不伤身体我能吞下玻璃而不伤身体我能吞下玻璃而不伤身体我能吞下玻璃而不伤身体我能吞下玻璃而不伤身体我能吞下玻璃而不伤身体我能吞下玻璃而不伤身体我能吞下玻璃而不伤身体我能吞下玻璃而不伤身体我
+能吞下玻璃而不伤身体我能吞下玻璃而不伤身体我能吞下玻璃而不伤身体我能吞下玻璃而不伤身体我能吞下玻璃而不伤身体我能吞下玻璃而不伤身体
+
+我能吞下玻璃而不伤身体我能吞下玻璃而不伤身体我能吞下玻璃而不伤身体我能吞下玻璃而不伤身体我能吞下玻璃而不伤身体我能吞下玻璃而不伤身体我能吞下玻璃而不伤身体我能吞下玻璃而不伤身体我能吞下玻璃而不伤身体我能吞下玻璃而不伤身体我能吞下玻璃而不伤身体我能吞下玻璃而不伤身体我
+能吞下玻璃而不伤身体我能吞下玻璃而不伤身体我能吞下玻璃而不伤身体我能吞下玻璃而不伤身体我能吞下玻璃而不伤身体我能吞下玻璃而不伤身体我能吞下玻璃而不伤身体我能吞下玻璃而不伤身体我能吞下玻璃而不伤身体我能吞下玻璃而不伤身体我能吞下玻璃而不伤身体我能吞下玻璃而不伤身体我
+能吞下玻璃而不伤身体我能吞下玻璃而不伤身体我能吞下玻璃而不伤身体我能吞下玻璃而不伤身体我能吞下玻璃而不伤身体我能吞下玻璃而不伤身体
+我能吞下玻璃而不伤身体我能吞下玻璃而不伤身体我能吞下玻璃而不伤身体我能吞下玻璃而不伤身体我能吞下玻璃而不伤身体我能吞下玻璃而不伤身体我能吞下玻璃而不伤身体我能吞下玻璃而不伤身体我能吞下玻璃而不伤身体我能吞下玻璃而不伤身体我能吞下玻璃而不伤身体我能吞下玻璃而不伤身体我
+能吞下玻璃而不伤身体我能吞下玻璃而不伤身体我能吞下玻璃而不伤身体我能吞下玻璃而不伤身体我能吞下玻璃而不伤身体我能吞下玻璃而不伤身体我能吞下玻璃而不伤身体我能吞下玻璃而不伤身体我能吞下玻璃而不伤身体我能吞下玻璃而不伤身体我能吞下玻璃而不伤身体我能吞下玻璃而不伤身体我
+能吞下玻璃而不伤身体我能吞下玻璃而不伤身体我能吞下玻璃而不伤身体我能吞下玻璃而不伤身体我能吞下玻璃而不伤身体我能吞下玻璃而不伤身体
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\begin{figure}[htbp]
+  \centering
+  % 图片内容
+  \caption{图片示例}
+\end{figure}
+
+\begin{table}[htbp]
+  \centering
+  \caption{表格示例}
+  \begin{tabular}{|c|c|}
+    \hline
+    内容 & 内容 \\
+    \hline
+  \end{tabular}
+\end{table}
+
+
+
+
+
+
+
+
+
+%------------------------------------------------------------
+% 以下为参考文献
+%------------------------------------------------------------
+
+~\\
+
+\xiaowu
+\printbibliography[title={\xiaosi\hei\bfseries 参考文献：}]
+\wuhao
+
+%------------------------------------------------------------
+% 以下为英文部分
+%------------------------------------------------------------
+
+~\\
+
+\begin{center}
+{\bfseries\xiaosan \egtitle}\\
+{\large\xiaosi \egauthor, \egteacher}\\
+{\small\xiaowu (\egaff)}\\
+\end{center}
+
+\noindent{\wuhao\bfseries\quad Abstract: }{\wuhao \egabstract}
+
+\noindent{\wuhao\bfseries\quad Key words: }{\wuhao \egkeywords}
+
+\end{document}
